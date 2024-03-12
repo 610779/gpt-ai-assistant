@@ -45,8 +45,8 @@ const createChatCompletion = ({
   maxTokens = config.OPENAI_COMPLETION_MAX_TOKENS,
   frequencyPenalty = config.OPENAI_COMPLETION_FREQUENCY_PENALTY,
   presencePenalty = config.OPENAI_COMPLETION_PRESENCE_PENALTY,
-}) => client.post('', {
-//}) => client.post('/v1/chat/completions', {
+//}) => client.post('', {
+}) => client.post('/v1/chat/completions', {
   model,
   messages,
   temperature,
