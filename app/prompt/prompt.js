@@ -52,8 +52,14 @@ class Prompt {
   /**
    * @param {string} content
    */
+  // patch(content) {
+  //   this.messages[this.messages.length - 1].content += content;
+  // }
   patch(content) {
-    this.messages[this.messages.length - 1].content += content;
+  // 先将新的内容添加到最后一条消息
+  this.messages[this.messages.length - 1].content += content;
+  // 然后在新内容之后添加 "翻譯成日文"
+  this.messages[this.messages.length - 1].content += '不要回答問題，只要把前面的文字翻譯成日文';
   }
 
   toString() {
